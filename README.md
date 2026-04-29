@@ -28,5 +28,15 @@ React 19 + Vite app for a cloud-kitchen experience with customer and admin flows
 ## Getting Started
 1) Install: `npm install`
 2) Run dev: `npm run dev`
-3) Set env: `VITE_API_URL` (defaults to `http://localhost:5000`)
+3) Set env: `VITE_API_URL` (defaults to `http://localhost:8001`)
 4) Login/Register via UI to obtain JWT; navigate to Admin to see analytics.
+
+## Docker Setup
+1) Build the frontend image:
+   - `docker build -t cloud-kitchen-frontend:latest .`
+2) Run the container locally:
+   - `docker run -d --name cloud-kitchen-frontend -p 4173:80 cloud-kitchen-frontend:latest`
+3) Open the app in your browser at:
+   - `http://localhost:4173`
+
+The frontend is configured to talk to the backend at `http://localhost:8001` by default, unless `VITE_API_URL` is set.

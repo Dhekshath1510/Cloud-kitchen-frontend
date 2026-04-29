@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://cloud-kitchen-backend-afa4a3g4aahubbbj.eastasia-01.azurewebsites.net'
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://cloud-kitchen-backend-afa4a3g4aahubbbj.eastasia-01.azurewebsites.net' || 'http://localhost:8000' || 'http://localhost:8001'
 
 // Helper function to safely parse stored tokens
 const getStoredToken = () => {
